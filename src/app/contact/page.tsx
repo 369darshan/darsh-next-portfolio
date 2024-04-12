@@ -26,22 +26,29 @@ const ContactPage = () => {
     //   setError(true)
     //   console.error(error.text)
     // })
-    emailjs.sendForm(
-      process.env.NEXT_PUBLIC_SERVICE_ID || '',
-      process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
-      form.current?.form,
-      process.env.NEXT_PUBLIC_PUBLIC_KEY || ''
-    ).then(
-      (result) => {
-        setSuccess(true);
-        form.current?.reset(); // Call reset as a function
-        console.log(result.text);
-      },
-      (error: any) => {
-        setError(true);
-        console.error(error.text);
-      }
-    );
+    const currentForm = form.current;
+
+    if (currentForm !== null) {
+      emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
+        currentForm,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY || ''
+      ).then(
+        (result) => {
+          setSuccess(true);
+          currentForm.reset(); // Call reset as a function
+          console.log(result.text);
+        },
+        (error: any) => {
+          setError(true);
+          console.error(error.text);
+        }
+      );
+    } else {
+      console.error('Form reference is null');
+    }
+
   }
 
   return (
