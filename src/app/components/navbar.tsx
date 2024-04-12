@@ -70,34 +70,22 @@ const Navbar = () => {
   return (
     <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl'>
       {/* LINKS */}
-      <div className='hidden md:flex gap-4 w-1/3'>
+      <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {links.map(link => (
           <NavLink link={link} key={link.title} />
         ))}
       </div>
       {/* LOGO */}
       <div className='md:hidden lg:flex xl:w-1/3 justify-center'>
-        <Link href='/' className='text-sm bg-black rounded-md p-1 font-semibold flex items-center xl:justify-center'>
+        <Link href='/' className=' ring-1 ring-white text-sm bg-black rounded-md p-1 font-semibold flex items-center xl:justify-center'>
           <span className='text-white mr-1'>Darsh</span>
           <span className='w-12 h-8 rounded bg-white text-black flex items-center justify-center'>.dev</span>
         </Link>
       </div>
       {/* SOCIALS */}
-      <div className='hidden md:flex gap-4 w-1/3'>
+      <div className='hidden md:flex gap-4 w-1/3 justify-end'>
         <Link href="https://github.com/369darshan">
-          <Image src='/github.png' alt='github' width={24} height={24} />
-        </Link>
-        <Link href="https://github.com/369darshan">
-          <Image src='/dribbble.png' alt='github' width={24} height={24} />
-        </Link>
-        <Link href="https://github.com/369darshan">
-          <Image src='/instagram.png' alt='github' width={24} height={24} />
-        </Link>
-        <Link href="https://github.com/369darshan">
-          <Image src='/facebook.png' alt='github' width={24} height={24} />
-        </Link>
-        <Link href="https://github.com/369darshan">
-          <Image src='/pinterest.png' alt='github' width={24} height={24} />
+          <Image src='/GitHub-white.png'className='rounded-sm' alt='github' width={24} height={24} />
         </Link>
         <Link href="https://github.com/369darshan">
           <Image src='/linkedin.png' alt='github' width={24} height={24} />
@@ -110,17 +98,17 @@ const Navbar = () => {
           <motion.div
             animate={open ? "opened" : "closed"}
             variants={topVariants}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
           <motion.div
             animate={open ? "opened" : "closed"}
             variants={centerVariants}
-            className="w-10 h-1 bg-black rounded"
+            className="w-10 h-1 bg-white rounded"
           ></motion.div>
           <motion.div
             animate={open ? "opened" : "closed"}
             variants={bottomVariants}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
         </button>
       </div>
