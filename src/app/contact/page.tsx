@@ -11,21 +11,37 @@ const ContactPage = () => {
 
   const text = "Say Hello"
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
   const ENV = "process.env"
 
   const sendEmail = (e: any) => {
     e.preventDefault();
     setError(false)
     setSuccess(false)
-    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY).then((result) => {
-      setSuccess(true)
-      form.current.reset
-      console.log(result.text)
-    }, (error: any) => {
-      setError(true)
-      console.error(error.text)
-    })
+    // emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY).then((result) => {
+    //   setSuccess(true)
+    //   form.current.reset
+    //   console.log(result.text)
+    // }, (error: any) => {
+    //   setError(true)
+    //   console.error(error.text)
+    // })
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_SERVICE_ID || '',
+      process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
+      form.current?.form,
+      process.env.NEXT_PUBLIC_PUBLIC_KEY || ''
+    ).then(
+      (result) => {
+        setSuccess(true);
+        form.current?.reset(); // Call reset as a function
+        console.log(result.text);
+      },
+      (error: any) => {
+        setError(true);
+        console.error(error.text);
+      }
+    );
   }
 
   return (
@@ -60,7 +76,7 @@ const ContactPage = () => {
         {/* FORM CONTAINER */}
         <form onSubmit={sendEmail} ref={form} className='h-1/2 lg:h-full lg:w-1/2 bg-blue-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24'>
           <span>Hello,</span>
-          <textarea name="user_message" id="" required rows="4" className='bg-transparent border-b-2 border-b-black outline-none resize-none'></textarea>
+          <textarea name="user_message" id="" required rows={4} className='bg-transparent border-b-2 border-b-black outline-none resize-none'></textarea>
           <span>My mail address is:</span>
           <input name='user_email' type="text" required className='bg-transparent border-b-2 border-b-black outline-none' />
           <span>Regards</span>

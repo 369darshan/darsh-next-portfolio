@@ -7,8 +7,8 @@ import { useRef } from 'react';
 
 
 const PortfolioPage = () => {
-
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement | null>(null);
+  // const ref = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"])
 

@@ -7,17 +7,17 @@ import Brain from "../components/brain";
 
 const AboutPage = () => {
   // const containerRef = useRef();
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // const { scrollYProgress } = useScroll({ container: containerRef });
   const { scrollYProgress } = useScroll({ container: containerRef });
 
 
-  const skillRef = useRef<HTMLElement>(null);
+  const skillRef = useRef<HTMLDivElement>(null);
   // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  const experienceRef = useRef<HTMLElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
