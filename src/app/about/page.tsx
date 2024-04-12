@@ -4,8 +4,6 @@ import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Brain from "../components/brain";
-import { profile } from "console";
-import { TracingBeam } from "../components/ui/tracing-beam";
 
 const AboutPage = () => {
   const containerRef = useRef();
