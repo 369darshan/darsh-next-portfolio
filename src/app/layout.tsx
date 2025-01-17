@@ -6,8 +6,25 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Animated portfolio page",
+  title: "Darsh Portfolio | Full Stack Developer",
+  description: "Full Stack Developer specializing in modern web technologies. Explore my projects and experience in web development, UI/UX design, and software engineering.",
+  keywords: ["Full Stack Developer", "Web Development", "React", "Next.js", "Portfolio", "Software Engineer"],
+  authors: [{ name: "Darsh" }],
+  openGraph: {
+    title: "Darsh Portfolio | Full Stack Developer",
+    description: "Full Stack Developer specializing in modern web technologies. Explore my projects and experience in web development.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Darsh Portfolio | Full Stack Developer",
+    description: "Full Stack Developer specializing in modern web technologies. Explore my projects and experience in web development.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

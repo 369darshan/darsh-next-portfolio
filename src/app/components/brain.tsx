@@ -12,7 +12,7 @@ const Brain = ({ scrollYProgress }: any) => {
   const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, -45]);
   return (
-    <div className="w-full h-full">
+    <motion.div className="particles w-full h-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}  >
       <svg width="100%" height="100%">
         <defs>
           <path d="M.416.37V.366L.417.345V.37" id="path-1" />
@@ -1616,7 +1616,7 @@ const Brain = ({ scrollYProgress }: any) => {
           </g>
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

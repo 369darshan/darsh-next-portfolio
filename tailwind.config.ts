@@ -20,6 +20,7 @@ const config: Config = {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        "spin-slow": "spin 8s linear infinite",
       },
       keyframes: {
         meteor: {
@@ -63,5 +64,3 @@ const config: Config = {
 // }
 
 export default config;
-
-

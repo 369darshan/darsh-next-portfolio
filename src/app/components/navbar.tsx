@@ -15,6 +15,7 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState("");
 
   const topVariants = {
     closed: {
@@ -67,29 +68,68 @@ const Navbar = () => {
     }
   }
 
+  const navItemVariants = {
+    initial: { scale: 1, z: 0 },
+    hover: { 
+      scale: 1.1, 
+      z: 20,
+      transition: { duration: 0.2 }
+    }
+  }
+
   return (
-    <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl'>
+    <div className='relative h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl'>
       {/* LINKS */}
       <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {links.map(link => (
-          <NavLink link={link} key={link.title} />
+          <motion.div
+            key={link.title}
+            variants={navItemVariants}
+            initial="initial"
+            whileHover="hover"
+            style={{ 
+              perspective: "1000px",
+              transformStyle: "preserve-3d"
+            }}
+            onHoverStart={() => setHoveredLink(link.title)}
+            onHoverEnd={() => setHoveredLink("")}
+            className="relative"
+          >
+            <div className={`absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg -z-10 transform ${hoveredLink === link.title ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200`} />
+            <NavLink link={link} />
+          </motion.div>
         ))}
       </div>
       {/* LOGO */}
-      <div className='md:hidden lg:flex xl:w-1/3 justify-center'>
-        <Link href='/' className=' ring-1 ring-white text-sm bg-black rounded-md p-1 font-semibold flex items-center xl:justify-center'>
-          <span className='text-white mr-1'>Darsh</span>
-          <span className='w-12 h-8 rounded bg-white text-black flex items-center justify-center'>.dev</span>
+      <motion.div 
+        className='md:hidden lg:flex xl:w-1/3 justify-center'
+        whileHover={{ scale: 1.05, rotateY: 10 }}
+        style={{ perspective: "1000px" }}
+      >
+        <Link href='/' className='relative ring-1 ring-white/50 text-sm bg-black/80 backdrop-blur-sm rounded-md p-1 font-semibold flex items-center xl:justify-center transform transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]'>
+          <span className='text-white mr-1 relative z-10'>Darsh</span>
+          <span className='w-12 h-8 rounded bg-white/90 text-black flex items-center justify-center relative z-10'>.dev</span>
+          <div className='absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-md -z-0' />
         </Link>
-      </div>
+      </motion.div>
       {/* SOCIALS */}
       <div className='hidden md:flex gap-4 w-1/3 justify-end'>
-        <Link href="https://github.com/369darshan">
-          <Image src='/GitHub-white.png'className='rounded-sm' alt='github' width={24} height={24} />
-        </Link>
-        <Link href="https://github.com/369darshan">
-          <Image src='/linkedin.png' alt='github' width={24} height={24} />
-        </Link>
+        <motion.div
+          whileHover={{ scale: 1.1, rotateZ: 5 }}
+          className="transition-transform"
+        >
+          <Link href="https://github.com/369darshan">
+            <Image src='/GitHub-white.png' className='rounded-sm hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]' alt='github' width={24} height={24} />
+          </Link>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1, rotateZ: -5 }}
+          className="transition-transform"
+        >
+          <Link href="https://github.com/369darshan">
+            <Image src='/linkedin.png' alt='github' width={24} height={24} className='hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]' />
+          </Link>
+        </motion.div>
       </div>
       {/* RESPONSIVE MENU */}
       <div className='md:hidden'>
