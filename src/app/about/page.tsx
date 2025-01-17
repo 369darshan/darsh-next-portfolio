@@ -58,7 +58,7 @@ const AboutPage = () => {
               transition={{ delay: 0.3 }}
             >
               <p className="text-lg text-center leading-relaxed">
-                Hi, I'm a Full Stack Developer with a passion for creating innovative digital solutions. I specialize in building modern web applications using cutting-edge technologies.
+                Hi, I&apos;m a Full Stack Developer with a passion for creating innovative digital solutions. I specialize in building modern web applications using cutting-edge technologies.
               </p>
               
               <div className="space-y-3 text-base">
@@ -67,7 +67,7 @@ const AboutPage = () => {
                 </p>
                 
                 <p className="leading-relaxed">
-                  I'm dedicated to writing clean, maintainable code and following best practices in software development. My goal is to create applications that not only look great but also perform exceptionally well.
+                  I&apos;m dedicated to writing clean, maintainable code and following best practices in software development. My goal is to create applications that not only look great but also perform exceptionally well.
                 </p>
               </div>
               
@@ -96,7 +96,7 @@ const AboutPage = () => {
             </motion.div>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic text-center text-gray-400">
-              "Innovation distinguishes between a leader and a follower." - Steve Jobs
+              &ldquo;Innovation distinguishes between a leader and a follower.&rdquo; - Steve Jobs
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end h-4 w-4 md:mr-40 sm:mr-52 max-sm:w-4 max-lg:w-[490px]">
