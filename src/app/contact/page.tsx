@@ -91,20 +91,19 @@ const ContactPage = () => {
       className="text-5xl lg:text-7xl font-bold relative z-10 transform-style-3d"
       style={{
         textShadow: `
+          0 0 1px #4fc3dc,
           0 0 2px #4fc3dc,
-          0 0 4px #4fc3dc,
-          0 0 8px #4fc3dc,
-          0 0 12px #4fc3dc
+          0 0 4px #4fc3dc
         `,
         backfaceVisibility: 'hidden',
-        WebkitFontSmoothing: 'antialiased',
-        MozOsxFontSmoothing: 'grayscale'
+        WebkitFontSmoothing: 'subpixel-antialiased',
+        textRendering: 'optimizeLegibility'
       }}
     >
       <span 
         className="inline-block transform-style-3d hover:scale-105 transition-transform duration-300 gradient-animate"
         style={{
-          transform: 'translateZ(30px)',
+          transform: 'translateZ(20px)',
           animation: 'float 3s ease-in-out infinite'
         }}
       >

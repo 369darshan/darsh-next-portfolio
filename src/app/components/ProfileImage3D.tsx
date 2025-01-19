@@ -41,6 +41,7 @@ const ProfileImage3D = () => {
           src="/profile.png"
           alt="profile"
           fill
+          sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover rounded-full p-2 group-hover:p-1 transition-all duration-300"
           priority
         />

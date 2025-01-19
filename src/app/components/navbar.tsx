@@ -113,21 +113,21 @@ const Navbar = () => {
         </Link>
       </motion.div>
       {/* SOCIALS */}
-      <div className='hidden md:flex gap-4 w-1/3 justify-end'>
+      <div className='hidden md:flex gap-4 w-1/3 justify-end relative z-50'>
         <motion.div
           whileHover={{ scale: 1.1, rotateZ: 5 }}
-          className="transition-transform"
+          className="transition-transform cursor-pointer relative z-50"
         >
-          <Link href="https://github.com/369darshan">
+          <Link href="https://github.com/369darshan" target="_blank" rel="noopener noreferrer">
             <Image src='/GitHub-white.png' className='rounded-sm hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]' alt='github' width={24} height={24} />
           </Link>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1, rotateZ: -5 }}
-          className="transition-transform"
+          className="transition-transform cursor-pointer relative z-50"
         >
-          <Link href="https://github.com/369darshan">
-            <Image src='/linkedin.png' alt='github' width={24} height={24} className='hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]' />
+          <Link href="https://linkedin.com/in/369darshan" target="_blank" rel="noopener noreferrer">
+            <Image src='/linkedin.png' alt='linkedin' width={24} height={24} className='hover:shadow-[0_0_10px_rgba(255,255,255,0.5)]' />
           </Link>
         </motion.div>
       </div>

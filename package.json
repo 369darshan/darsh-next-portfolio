@@ -10,17 +10,20 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
-    "@react-three/drei": "^9.99.7",
-    "@react-three/fiber": "^8.15.19",
+    "@react-three/drei": "^9.121.2",
+    "@react-three/fiber": "^8.17.12",
     "@types/lodash": "^4.17.14",
+    "@types/three": "^0.172.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "framer-motion-3d": "^11.18.1",
     "lodash": "^4.17.21",
     "next": "14.2.21",
     "react": "^18",
     "react-dom": "^18",
     "react-medium-image-zoom": "^5.2.13",
     "tailwind-merge": "^2.2.1",
+    "three": "^0.172.0",
     "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {

@@ -21,7 +21,7 @@ const TransitionProvider = ({ children }: any) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "circInOut" }}
+          transition={{ duration: 0.3, ease: "circInOut" }}
         >
           {pathName.substring(1)}
         </motion.div>
