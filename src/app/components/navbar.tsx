@@ -163,7 +163,7 @@ const Navbar = () => {
             <motion.div
               variants={listItemVariants}
               key={link.title}>
-              <Link href={link.url} >
+              <Link href={link.url} className="block w-full py-4 text-center hover:text-gray-300 transition-colors border-b border-gray-700">
                 {link.title}
               </Link>
             </motion.div>

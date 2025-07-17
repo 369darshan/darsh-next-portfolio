@@ -52,7 +52,7 @@ const AboutPage = () => {
             </motion.h1>
             {/* BIOGRAPHY DESC */}
             <motion.div
-              className="flex flex-col gap-4 text-gray-300"
+              className="flex flex-col gap-6 text-gray-300 px-4 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -61,7 +61,7 @@ const AboutPage = () => {
                 Hi, I&apos;m a Full Stack Developer with a passion for creating innovative digital solutions. I specialize in building modern web applications using cutting-edge technologies.
               </p>
               
-              <div className="space-y-3 text-base">
+              <div className="space-y-4 text-base">
                 <p className="leading-relaxed">
                   With expertise in both front-end and back-end development, I craft seamless user experiences while ensuring robust application architecture. My tech stack includes React, Next.js, Node.js, and various modern development tools.
                 </p>
@@ -337,7 +337,7 @@ const AboutPage = () => {
                     <div className="relative backdrop-blur-sm bg-black/50 border border-white/10 rounded-lg overflow-hidden">
                       {/* JOB TITLE */}
                       <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 font-semibold text-white">
-                        JavaScript Engineer
+                        Full Stack Developer
                       </div>
                       {/* JOB DESC */}
                       <div className="p-3 text-sm italic text-gray-300">
