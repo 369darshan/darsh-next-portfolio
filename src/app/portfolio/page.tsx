@@ -45,6 +45,22 @@ const items = [
     desc: "A dynamic dashboard interface for the Agency Project Tracker, providing real-time analytics, customizable widgets, and interactive data visualizations for project performance monitoring.",
     img: "/projects/Agency-project-tracker-Dashboard/dashboard.png",
     link: "",
+  },
+  {
+    id: 6,
+    color: "from-purple-300 to-pink-300",
+    title: "agriKart-Admin",
+    desc: "A comprehensive e-commerce admin dashboard for managing an agricultural products marketplace, with complete control over products, orders, and users.",
+    img: "/projects/agriadmin/01-dashboard.png",
+    link: "",
+  },
+  {
+    id: 7,
+    color: "from-purple-300 to-pink-300",
+    title: "agriKart-User",
+    desc: "A comprehensive e-commerce platform for buying and selling agricultural products, featuring user roles, project tracking, and detailed analytics.",
+    img: "/projects/agriuser/01-home.png",
+    link: "",
   }
 ];
 

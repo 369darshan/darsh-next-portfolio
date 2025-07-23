@@ -177,6 +177,91 @@ const items = [
         "/projects/Agency-project-tracker-Dashboard/user.png"
       ]
     }
+  },{
+    id: 6,
+    color: "from-green-300 to-blue-300", 
+    title: "agriKart-Admin",
+    desc: "A comprehensive e-commerce admin dashboard for managing an agricultural products marketplace, with complete control over products, orders, and users.",
+    img: "/projects/agriadmin/01-dashboard.png",
+    link: "",
+    details: {
+      description: "An advanced admin dashboard for agriKart e-commerce platform that enables complete management of the agricultural marketplace. Features include product catalog management, order processing, user management, and analytics tracking for an efficient operation.",
+      features: [
+        "product management",
+        "Inventory tracking",
+        "Order processing and fulfillment workflow",
+        "Customer account management",
+        "Sales analytics and reporting",
+        "Category and tag management",
+        "Inventory alerts and low stock notifications",
+        "Order status tracking",
+        "User role and permissions management",
+        "Product image gallery management",
+        "Bulk product import/export",
+        "Order history and invoice generation",
+        "Customer support ticket system"
+      ],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "TailwindCSS",
+        "JWT Authentication",
+      ],
+      images: [
+        "/projects/agriadmin/01-dashboard.png",
+        "/projects/agriadmin/02-products.png",
+        "/projects/agriadmin/03-addproduct.png",
+        "/projects/agriadmin/04-editproduct.png",
+        "/projects/agriadmin/05-categories.png",
+        "/projects/agriadmin/06-order.png",
+        "/projects/agriadmin/07-orderdetail.png",
+        "/projects/agriadmin/08-promo.png",
+        "/projects/agriadmin/09-promogen.png",
+        "/projects/agriadmin/10-review.png",
+        "/projects/agriadmin/11-user.png",
+      ]
+    }
+  },{
+    id: 7,
+    color: "from-green-300 to-blue-300",
+    title: "agriKart-User",
+    desc: "A comprehensive e-commerce platform for buying and selling agricultural products, featuring user roles, project tracking, and detailed analytics.",
+    img: "/projects/agriuser/01-home.png",
+    link: "",
+    details: {
+      description: "A robust project management system designed for agencies to track projects, manage teams, and monitor progress efficiently.",
+      features: [
+        "User Dashboard",
+        "User Profile Management",
+        "User Address Management",
+        "User Order Management",
+        "User Order Details Management",
+      ],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "TailwindCSS",
+      ],
+      images: [
+        "/projects/agriuser/01-home.png",
+        "/projects/agriuser/02-products.png",
+        "/projects/agriuser/03-productdetails.png",
+        "/projects/agriuser/04-info.png",
+        "/projects/agriuser/05-category.png",
+        "/projects/agriuser/06-about.png",
+        "/projects/agriuser/07-contact.png",
+        "/projects/agriuser/08-cart.png",
+        "/projects/agriuser/09-checkout.png",
+        "/projects/agriuser/10-payment.png",
+        "/projects/agriuser/11-profile.png",
+        "/projects/agriuser/12-profileedit.png",
+        "/projects/agriuser/13-order.png",
+        "/projects/agriuser/14-login.png",
+        "/projects/agriuser/15-signup.png",
+      ]
+    }
   }
 ];
 
